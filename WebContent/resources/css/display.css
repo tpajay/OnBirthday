@@ -1,0 +1,87 @@
+.foo {
+   text-align: left;
+   font-family: Verdana, Arial, Helvetica;
+   font-size: 12px;
+}
+
+.w5 {
+   width:5%;
+   font-family: Verdana, Arial, Helvetica;
+   font-size: 12px;
+}
+
+.w15 {
+   width:15%;
+   font-family: Verdana, Arial, Helvetica;
+   font-size: 12px;
+}
+
+.w35 {
+   width:35%;
+}
+
+th, td {
+    text-align: left;
+    font-family: Verdana, Arial, Helvetica;
+    font-size: 11px;
+}
+
+thead tr {
+  background-color: #0099ff;
+}
+
+th.sorted {
+    background-color: #33CCFF;
+}
+
+th a, th a:visited {
+    color: black;
+}
+
+th.sorted a, th.sortable a {
+    background-position: right;
+    display: block;
+}
+
+tr.odd {
+    background-color: #fff
+}
+
+tr.tableRowEven, tr.even {
+    background-color: #99ccff
+}
+
+span.export {
+    padding: 0 4px 1px 20px;
+    display: inline;
+    cursor: pointer;
+}
+
+span.excel {
+    background-image: url(../resources/images/ico_file_excel.png);
+}
+
+span.csv {
+    background-image: url(../resources/images/ico_file_csv.png);
+}
+
+span.xml {
+    background-image: url(../resources/images/ico_file_xml.png);
+}
+
+span.pagebanner {
+    background-color: #eee;
+    width: 100%;
+    margin-top: 0px;
+    display: block;
+    border-bottom: 5px;
+}
+
+span.pagelinks {
+    background-color: #eee;
+    width: 100%;
+    margin-top: 0px;
+    display: block;
+    border-top: 0px;
+    margin-bottom: 0px;
+}

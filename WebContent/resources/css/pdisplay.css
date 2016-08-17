@@ -1,0 +1,36 @@
+.foo {
+   text-align: left;
+   font-family: Verdana, Arial, Helvetica;
+   font-size: 12px;
+}
+
+th, td {
+    text-align: left;
+    font-family: Verdana, Arial, Helvetica;
+    font-size: 11px;
+}
+
+thead tr {
+  background-color: #999999;
+}
+
+th.sorted {
+    background-color: #999999;
+}
+
+th a, th a:visited {
+    color: black;
+}
+
+th.sorted a, th.sortable a {
+    background-position: right;
+    display: block;
+}
+
+tr.odd {
+    background-color: #fff
+}
+
+tr.tableRowEven, tr.even {
+    background-color: #CCCCCC
+}

@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+          "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+
+<!-- ================================================ Form Bean Definitions -->
+
+    <form-beans>
+    <!-- sample form bean descriptor for an ActionForm
+        <form-bean
+            name="inputForm"
+            type="app.InputForm"/>
+    end sample -->
+
+    <!-- sample form bean descriptor for a DynaActionForm
+        <form-bean
+            name="logonForm"
+            type="org.apache.struts.action.DynaActionForm">
+            <form-property
+                name="username"
+                type="java.lang.String"/>
+            <form-property
+                name="password"
+                type="java.lang.String"/>
+       </form-bean>
+    end sample -->
+
+		<!-- begin: SearchDetailsForm -->
+		<form-bean name="searchDetailsForm" type="org.apache.struts.validator.DynaValidatorForm">
+			<form-property name="name" type="java.lang.String"/>
+			<form-property name="address1" type="java.lang.String"/>
+			<form-property name="address2" type="java.lang.String"/>
+			<form-property name="city" type="java.lang.String"/>
+			<form-property name="state" type="java.lang.String"/>
+			<form-property name="zipcode" type="java.lang.String"/>
+			<form-property name="phone1" type="java.lang.String"/>
+			<form-property name="phone2" type="java.lang.String"/>
+			<form-property name="http" type="java.lang.String"/>
+			<form-property name="details" type="java.lang.String"/>
+			<form-property name="freemeal" type="java.lang.String"/>
+			<form-property name="category" type="java.lang.String"/>
+			<form-property name="nationwide" type="java.lang.String"/>
+		</form-bean>
+		<!-- end: SearchDetailsForm -->
+
+    </form-beans>
+
+
+<!-- ========================================= Global Exception Definitions -->
+
+    <global-exceptions>
+        <!-- sample exception handler
+        <exception
+            key="expired.password"
+            type="app.ExpiredPasswordException"
+            path="/changePassword.jsp"/>
+        end sample -->
+    </global-exceptions>
+
+
+<!-- =========================================== Global Forward Definitions -->
+
+    <global-forwards>
+        <forward name="welcome" path="/loader.do"/>
+		<forward name="error" path=".error"/>
+
+		<!-- begin: main -->
+		<action path="/sendtip" forward=".sendTip"/>
+		<action path="/contactus" forward=".contactUs"/>
+		<action path="/faq" forward=".faq"/>
+
+		<!-- begin: admin -->
+		<action path="/signin" forward=".login"/>
+		<action path="/feeds" forward=".feeds"/>
+
+		<!-- begin: store -->
+		<action path="/register" forward=".register"/>
+		<action path="/cart" forward=".cartDetails"/>
+		<action path="/businesscreate" forward=".businessCreate"/>
+		<action path="/createproduct" forward=".createProduct"/>
+
+		<!--
+		<forward name="home2" path=".mainLayout"/>
+		<forward name="info" path=".infoPage"/>
+		<forward name="search" path=".search"/>
+		<forward name="searchresults" path=".searchResults"/>
+		<forward name="searchdetailresults" path=".searchDetailResults"/>
+
+		<forward name="tipspending" path=".tipsPending"/>
+		<forward name="searchallresults" path=".searchAllResults"/>
+		<forward name="commentresults" path=".commentResults"/>
+		<forward name="tipdetails" path=".tipDetails"/>
+
+		<forward name="productlist" path=".productList"/>
+		<forward name="productdetails" path=".productDetails"/>
+		<forward name="orderlogin" path=".orderLogin"/>
+		<forward name="billinginfo" path=".billingInfo"/>
+		<forward name="submitorderinfo" path=".submitOrderInfo"/>
+		-->
+
+    </global-forwards>
+
+
+<!-- =========================================== Action Mapping Definitions -->
+
+    <action-mappings>
+
+<!-- site(s) loader -->
+		<action path="/loader" type="com.onbirthday.action.LoaderAction" name="" scope="request" validate="false" input="">
+			<forward name="success" path="/home.do"/>
+			<forward name="redirecttohome" path="/home.do"/>
+			<forward name="tcm_success" path="/tcm_home.do"/>
+			<forward name="failure" path=".error"/>
+		</action>
+
+<!-- being: main site -->
+        <action path="/home" type="com.onbirthday.action.LoadHomeAction" name="" scope="request" validate="false" input="">
+			<forward name="success" path=".mainLayout"/>
+			<forward name="failure" path=".mainLayout"/>
+		</action>
+
+        <action path="/commentcreate" type="com.onbirthday.action.CommentCreateAction" name="" scope="request" validate="false" input=".contactUs">
+			<!--<forward name="success" path="/home.do"/>-->
+			<forward name="success" path=".infoPage"/>
+			<forward name="failure" path=".error"/>
+		</action>
+
+        <action path="/searchsubmit" type="com.onbirthday.action.SearchAction" name="" scope="request" validate="false" input=".search">
+			<forward name="success" path=".searchResults"/>
+			<forward name="failure" path=".error"/>
+		</action>
+
+		<action path="/searchdetails" type="com.onbirthday.action.SearchDetailsAction" name="" scope="request" validate="false" input="">
+			<forward name="success" path=".searchDetailResults"/>
+			<forward name="failure" path=".error"/>
+		</action>
+
+        <action path="/createtip" type="com.onbirthday.action.TipCreateAction" name="" scope="request" validate="false" input=".sendTip">
+			<!--<forward name="success" path="/home.do"/>-->
+			<forward name="success" path=".infoPage"/>
+			<forward name="failure" path=".error"/>
+		</action>
+
+        <action path="/loginsubmit" type="com.onbirthday.action.LoginAction" name="" scope="request" validate="false" input=".sendTip">
+			<forward name="success" path="/home.do"/>
+			<forward name="failure" path=".login"/>
+			<forward name="billinginfo" path=".billingInfo"/>
+		</action>
+
+        <action path="/submitregistration" type="com.onbirthday.action.RegistrationAction" name="" scope="request" validate="false" input=".sendTip">
+			<forward name="success" path="/home.do"/>
+			<forward name="failure" path=".login"/>
+			<forward name="billinginfo" path=".billingInfo"/>
+		</action>
+
+		<action path="/advertisehere" forward="/loader.do"/>
+
+	<!-- begin: ajax calls -->
+		<action path="/searchdetailsAjax" type="com.onbirthday.action.SearchDetailsAction"
+			name="searchDetailsForm"
+			scope="request"
+			validate="false"
+			input="/pages/onbirthday/searchresults.jsp">
+			<forward name="content1" path="/pages/onbirthday/ajaxresponse.jsp" />
+		</action>
+
+		<action path="/ajaxProcessAction" type="com.onbirthday.action.AjaxProcessAction"
+			name="searchDetailsForm"
+			scope="request"
+			validate="false"
+			input="/pages/onbirthday/FaxLSR.jsp">
+			<forward name="content1" path="/pages/onbirthday/ajaxresponse.jsp" />
+			<forward name="failure" path="/pages/onbirthday/ajaxresponse.jsp"/>
+		</action>
+	<!-- end: ajax calls -->
+
+	<!-- begin: admin actions -->
+        <action path="/searchallsubmit" type="com.onbirthday.action.admin.SearchAllAction" name="" scope="request" validate="false" input=".search">
+			<forward name="success" path=".searchAllResults"/>
+			<forward name="failure" path=".error"/>
+		</action>
+
+        <action path="/commentsearchsubmit" type="com.onbirthday.action.admin.CommentSearchAction" name="" scope="request" validate="false" input="">
+			<forward name="success" path=".commentResults"/>
+			<forward name="failure" path=".error"/>
+		</action>
+
+        <action path="/approvetips" type="com.onbirthday.action.admin.TipsAppovedAction" name="" scope="request" validate="false" input="">
+			<forward name="success" path="/pendingtips.do"/>
+			<forward name="pendingtips" path="/pendingtips.do"/>
+			<forward name="allbusinesses" path="/searchallsubmit.do"/>
+			<forward name="failure" path=".error"/>
+		</action>
+
+        <action path="/pendingtips" type="com.onbirthday.action.admin.TipsPendingAction" name="" scope="request" validate="false" input="">
+			<forward name="success" path=".tipsPending"/>
+			<forward name="failure" path=".error"/>
+		</action>
+
+		<action path="/pendingtipsdetails" type="com.onbirthday.action.admin.TipsPendingDetailAction" name="" scope="request" validate="false" input="">
+			<forward name="success" path=".tipDetails"/>
+			<forward name="failure" path=".error"/>
+		</action>
+
+        <action path="/businesssubmit" type="com.onbirthday.action.admin.BusinessCreateAction" name="" scope="request" validate="false" input="">
+			<forward name="success" path=".businessCreate"/>
+			<forward name="failure" path=".error"/>
+		</action>
+
+        <action path="/admintasks" type="com.onbirthday.action.admin.AdminTasksAction" name="" scope="request" validate="false" input="">
+			<!--<forward name="success" path="/home.do"/>-->
+			<forward name="success" path=".infoPage"/>
+			<forward name="failure" path=".error"/>
+			<forward name="editbusiness" path="/pendingtipsdetails.do"/>
+			<forward name="pendingtips" path="/pendingtips.do"/>
+			<forward name="elcomments" path="/commentsearchsubmit.do"/>
+		</action>
+	<!-- end: admin actions -->
+
+	<!-- begin: store actions -->
+        <action path="/submitproduct" type="com.onbirthday.action.store.ProductCreateAction" name="" scope="request" validate="false" input=".sendTip">
+			<forward name="success" path="/home.do"/>
+			<forward name="failure" path=".error"/>
+		</action>
+
+        <action path="/products" type="com.onbirthday.action.store.ProductsRetrieveAction" name="" scope="request" validate="false" input="">
+			<forward name="success" path=".productList"/>
+			<forward name="failure" path=".error"/>
+		</action>
+
+        <action path="/productdetail" type="com.onbirthday.action.store.ProductRetrieveAction" name="" scope="request" validate="false" input="">
+			<forward name="success" path=".productDetails"/>
+			<forward name="failure" path=".error"/>
+		</action>
+
+        <action path="/addtocart" type="com.onbirthday.action.store.AddCartItemAction" name="" scope="request" validate="false" input=".sendTip">
+			<forward name="success" path="/home.do"/>
+			<forward name="failure" path=".error"/>
+			<forward name="shoppingcart" path=".cartDetails"/>
+		</action>
+
+        <action path="/deletefromcart" type="com.onbirthday.action.store.DeleteCartItemAction" name="" scope="request" validate="false" input=".sendTip">
+			<forward name="success" path="/home.do"/>
+			<forward name="failure" path=".error"/>
+			<forward name="shoppingcart" path=".cartDetails"/>
+		</action>
+
+        <action path="/updatecart" type="com.onbirthday.action.store.UpdateCartItemAction" name="" scope="request" validate="false" input=".sendTip">
+			<forward name="success" path="/home.do"/>
+			<forward name="failure" path=".error"/>
+			<forward name="shoppingcart" path=".cartDetails"/>
+		</action>
+
+        <action path="/submitorder" type="com.onbirthday.action.store.OrderSubmitAction" name="" scope="request" validate="false" input=".sendTip">
+			<forward name="success" path="/home.do"/>
+			<forward name="failure" path=".login"/>
+		</action>
+	<!-- end: store actions -->
+
+
+	<!-- begin: misc -->
+		<action path="/loadfeeds" type="com.onbirthday.action.FeedLoadAction" name="" scope="request" validate="false" input="">
+			<forward name="success" path=".feeds"/>
+			<forward name="failure" path=".mainLayout"/>
+		</action>
+	<!-- end: misc -->
+
+
+		<action path="/sendtip" forward=".sendTip"/>
+		<action path="/contactus" forward=".contactUs"/>
+		<action path="/feeds" forward=".feeds"/>
+		<action path="/faq" forward=".faq"/>
+		<action path="/signin" forward=".login"/>
+		<action path="/register" forward=".register"/>
+		<action path="/cart" forward=".cartDetails"/>
+		<action path="/businesscreate" forward=".businessCreate"/>
+		<action path="/createproduct" forward=".createProduct"/>
+<!-- end: main site -->
+
+
+<!-- begin: thecakemuse website -->
+		<action path="/tcm_contactus" forward=".tcmContactUs"/>
+		<action path="/tcm_about" forward=".tcmAbout"/>
+		<action path="/tcm_portfolio" forward=".tcmPortfolio"/>
+		<action path="/tcm_links" forward=".tcmLinks"/>
+
+        <action path="/tcm_home" type="com.thecakemuse.action.LoadHomeAction" name="" scope="request" validate="false" input="">
+			<!--<forward name="success" path=".tcmMainLayout"/>
+			<forward name="failure" path=".tcmMainLayout"/>-->
+			<forward name="success" path="/thecakemuse/thecakemuse.html"/>
+			<forward name="failure" path="/thecakemuse/thecakemuse.html"/>
+		</action>
+
+        <action path="/tcm_submitcontactus" type="com.thecakemuse.action.ContactUsCreateAction" name="" scope="request" validate="false" input=".contactUs">
+			<forward name="success" path=".tcmMainLayout"/>
+			<forward name="failure" path=".tcmError"/>
+		</action>
+
+        <action path="/tcm_contactslist" type="com.thecakemuse.action.admin.ContactsSearchAction" name="" scope="request" validate="false" input="">
+			<forward name="success" path=".tcmContactsResults"/>
+			<forward name="failure" path=".error"/>
+		</action>
+
+        <action path="/tcm_admintasks" type="com.thecakemuse.action.admin.AdminTasksAction" name="" scope="request" validate="false" input="">
+			<forward name="success" path="/tcm_contactslist.do"/>
+			<forward name="failure" path=".error"/>
+		</action>
+
+	<!-- begin: page links -->
+		<action path="/tcm_cakes" forward=".tcmCakes"/>
+		<action path="/tcm_cookies" forward=".tcmCookies"/>
+		<action path="/tcm_pricing" forward=".tcmPricing"/>
+		<action path="/tcm_ordering" forward=".tcmOrdering"/>
+		<action path="/tcm_contact" forward=".tcmContact"/>
+	<!-- end: page links -->
+
+<!-- end: themusecake website -->
+
+    </action-mappings>
+
+
+<!-- ======================================== Message Resources Definitions -->
+    <message-resources parameter="resources.MessageResources" />
+
+
+<!-- =============================================== Plug Ins Configuration -->
+
+  <!-- ======================================================= Tiles plugin -->
+  <!--
+     This plugin initialize Tiles definition factory. This later can takes some
+	 parameters explained here after. The plugin first read parameters from
+	 web.xml, thenoverload them with parameters defined here. All parameters
+	 are optional.
+     The plugin should be declared in each struts-config file.
+       - definitions-config: (optional)
+            Specify configuration file names. There can be several comma
+		    separated file names (default: ?? )
+       - moduleAware: (optional - struts1.1)
+            Specify if the Tiles definition factory is module aware. If true
+            (default), there will be one factory for each Struts module.
+			If false, there will be one common factory for all module. In this
+            later case, it is still needed to declare one plugin per module.
+            The factory will be initialized with parameters found in the first
+            initialized plugin (generally the one associated with the default
+            module).
+			  true : One factory per module. (default)
+			  false : one single shared factory for all modules
+	   - definitions-parser-validate: (optional)
+	        Specify if xml parser should validate the Tiles configuration file.
+			  true : validate. DTD should be specified in file header (default)
+			  false : no validation
+
+	  Paths found in Tiles definitions are relative to the main context.
+
+      To use this plugin, download and add the Tiles jar to your WEB-INF/lib
+      directory then uncomment the plugin definition below.
+     -->
+
+    <plug-in className="org.apache.struts.tiles.TilesPlugin" >
+      <set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml" />
+      <set-property property="moduleAware" value="true" />
+      <set-property property="definitions-parser-validate" value="true" />
+    </plug-in>
+
+
+  <!-- =================================================== Validator plugin -->
+
+  <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+    <set-property
+        property="pathnames"
+        value="/org/apache/struts/validator/validator-rules.xml,
+               /WEB-INF/validation.xml"/>
+  </plug-in>
+
+</struts-config>
+

@@ -1,0 +1,64 @@
+/*
+	Portrait: 372 x 240
+	Landscape: 240 x 372
+	Thumbnail: 93 x 60
+*/
+
+#container {
+	position:relative;
+	width:670px;
+	height:596px;
+	margin:20px auto 0 auto;
+	background:#fff url(/resources/images/tcm/bgorg.jpg) 75px 10px no-repeat;
+	border:1px solid #aaa;
+}
+
+#container ul {
+	width:198px;
+	height:386px;
+	padding:0;
+	margin:5px;
+	list-style-type:none;
+	float:left;
+}
+
+#container li {	float:left; }
+
+#container a.gallery, #container a.gallery:visited {
+	display:block;
+	color:#000;
+	text-decoration:none;
+	border:1px solid #000;
+	margin:1px 2px 1px 2px;
+	text-align:left;
+	cursor:default;
+}
+
+#container a.slidea {background:url(cakes/thumbnails/01a.jpg); width:93px; height:60px;}
+#container a.slideb {background:url(cakes/thumbnails/02a.jpg); width:93px; height:60px;}
+#container a.slidec {background:url(cakes/thumbnails/03a.jpg); width:93px; height:60px;}
+#container a.slided {background:url(cakes/thumbnails/04a.jpg); width:60px; height:93px;}
+#container a.slidee {background:url(cakes/thumbnails/05a.jpg); width:60px; height:93px;}
+#container a.slidef {background:url(cakes/thumbnails/06a.jpg); width:60px; height:93px;}
+#container a.slideg {background:url(cakes/thumbnails/07a.jpg); width:60px; height:93px;}
+#container a.slideh {background:url(cakes/thumbnails/08a.jpg); width:93px; height:60px;}
+#container a.slidei {background:url(cakes/thumbnails/09a.jpg); width:93px; height:60px;}
+#container a.slidej {background:url(cakes/thumbnails/10a.jpg); width:93px; height:60px;}
+#container a.slidek {background:url(cakes/thumbnails/11a.jpg); width:93px; height:60px;}
+#container a.slidel {background:url(cakes/thumbnails/12a.jpg); width:93px; height:60px;}
+#container a.slidem {background:url(cakes/thumbnails/13a.jpg); width:93px; height:60px;}
+
+
+#container a.gallery span {
+	position:absolute;
+	width:1px;
+	height:1px;
+	top:5px;
+	left:5px;
+	background:#fff;
+	overflow:hidden;
+}
+#container a.gallery:hover {border:1px solid #fff;}
+#container a.gallery:hover img {border:1px solid #fff; float:left; margin-right:5px;}
+#container a.slideb:hover img, #container a.slidei:hover img {float:right;}
+#container a.gallery:hover span {position:absolute; width:372px; height:472px; top:50px; left:250px; color:#000; background:#fff;}

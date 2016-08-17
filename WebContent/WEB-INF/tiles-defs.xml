@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+"-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+"http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+
+<tiles-definitions>
+
+<!-- begin: main site -->
+    <definition name=".mainLayout" path="/pages/onbirthday/layouts/mainlayout.jsp">
+        <put name="title"  value="onbirthday.com" />
+        <put name="header" value="/pages/onbirthday/layouts/mainheader.jsp" />
+        <put name="adheader" value="/pages/onbirthday/layouts/adheader.jsp" />
+        <put name="navleft" value="/pages/onbirthday/layouts/navleft.jsp" />
+        <put name="navright" value="/pages/onbirthday/layouts/navright.jsp" />
+        <put name="adfooter" value="/pages/onbirthday/layouts/adfooter.jsp" />
+        <put name="body"   value="/pages/onbirthday/main.jsp" />
+    </definition>
+
+    <definition name=".login" path="/pages/onbirthday/layouts/mainlayout.jsp">
+        <put name="title"  value="onbirthday.com" />
+        <put name="header" value="/pages/onbirthday/layouts/mainheader.jsp" />
+        <put name="adheader" value="/pages/onbirthday/layouts/adheader.jsp" />
+        <put name="navleft" value="/pages/onbirthday/layouts/navleft.jsp" />
+        <put name="navright" value="/pages/onbirthday/layouts/navright.jsp" />
+        <put name="adfooter" value="/pages/onbirthday/layouts/adfooter.jsp" />
+        <put name="body"   value="/pages/onbirthday/login.jsp" />
+    </definition>
+
+    <definition name=".register" path="/pages/onbirthday/layouts/mainlayout.jsp">
+        <put name="title"  value="onbirthday.com" />
+        <put name="header" value="/pages/onbirthday/layouts/mainheader.jsp" />
+        <put name="adheader" value="/pages/onbirthday/layouts/adheader.jsp" />
+        <put name="navleft" value="/pages/onbirthday/layouts/navleft.jsp" />
+        <put name="navright" value="/pages/onbirthday/layouts/navright.jsp" />
+        <put name="adfooter" value="/pages/onbirthday/layouts/adfooter.jsp" />
+        <put name="body"   value="/pages/onbirthday/register.jsp" />
+    </definition>
+
+    <definition name=".infoPage" path="/pages/onbirthday/layouts/mainlayout.jsp">
+        <put name="title"  value="onbirthday.com" />
+        <put name="header" value="/pages/onbirthday/layouts/mainheader.jsp" />
+        <put name="adheader" value="/pages/onbirthday/layouts/adheader_blank.jsp" />
+        <put name="navleft" value="/pages/onbirthday/layouts/navleft_blank.jsp" />
+        <put name="navright" value="/pages/onbirthday/layouts/navright_blank.jsp" />
+        <put name="adfooter" value="/pages/onbirthday/layouts/adfooter.jsp" />
+        <put name="body"   value="/pages/onbirthday/info.jsp" />
+    </definition>
+
+    <definition name=".sendTip" path="/pages/onbirthday/layouts/mainlayout.jsp">
+        <put name="title"  value="onbirthday.com" />
+        <put name="header" value="/pages/onbirthday/layouts/mainheader.jsp" />
+        <put name="adheader" value="/pages/onbirthday/layouts/adheader.jsp" />
+        <put name="navleft" value="/pages/onbirthday/layouts/navleft.jsp" />
+        <put name="navright" value="/pages/onbirthday/layouts/navright.jsp" />
+        <put name="adfooter" value="/pages/onbirthday/layouts/adfooter.jsp" />
+        <put name="body"   value="/pages/onbirthday/sendtip.jsp" />
+    </definition>
+
+    <definition name=".contactUs" path="/pages/onbirthday/layouts/mainlayout.jsp">
+        <put name="title"  value="onbirthday.com" />
+        <put name="header" value="/pages/onbirthday/layouts/mainheader.jsp" />
+        <put name="adheader" value="/pages/onbirthday/layouts/adheader.jsp" />
+        <put name="navleft" value="/pages/onbirthday/layouts/navleft.jsp" />
+        <put name="navright" value="/pages/onbirthday/layouts/navright.jsp" />
+        <put name="adfooter" value="/pages/onbirthday/layouts/adfooter.jsp" />
+        <put name="body"   value="/pages/onbirthday/contactus.jsp" />
+    </definition>
+
+    <definition name=".search" path="/pages/onbirthday/layouts/mainlayout.jsp">
+        <put name="title"  value="onbirthday.com" />
+        <put name="header" value="/pages/onbirthday/layouts/mainheader.jsp" />
+        <put name="adheader" value="/pages/onbirthday/layouts/adheader.jsp" />
+        <put name="navleft" value="/pages/onbirthday/layouts/navleft.jsp" />
+        <put name="navright" value="/pages/onbirthday/layouts/navright.jsp" />
+        <put name="adfooter" value="/pages/onbirthday/layouts/adfooter.jsp" />
+        <put name="body"   value="/pages/onbirthday/search.jsp" />
+    </definition>
+
+    <definition name=".searchResults" path="/pages/onbirthday/layouts/mainlayout.jsp">
+        <put name="title"  value="onbirthday.com" />
+        <put name="header" value="/pages/onbirthday/layouts/mainheader.jsp" />
+        <put name="adheader" value="/pages/onbirthday/layouts/adheader.jsp" />
+        <put name="navleft" value="/pages/onbirthday/layouts/navleft.jsp" />
+        <put name="navright" value="/pages/onbirthday/layouts/navright.jsp" />
+        <put name="adfooter" value="/pages/onbirthday/layouts/adfooter.jsp" />
+        <put name="body"   value="/pages/onbirthday/searchresults.jsp" />
+    </definition>
+
+    <definition name=".searchDetailResults" path="/pages/onbirthday/layouts/mainlayout.jsp">
+        <put name="title"  value="onbirthday.com" />
+        <put name="header" value="/pages/onbirthday/layouts/mainheader.jsp" />
+        <put name="adheader" value="/pages/onbirthday/layouts/adheader.jsp" />
+        <put name="navleft" value="/pages/onbirthday/layouts/navleft.jsp" />
+        <put name="navright" value="/pages/onbirthday/layouts/navright.jsp" />
+        <put name="adfooter" value="/pages/onbirthday/layouts/adfooter.jsp" />
+        <put name="body"   value="/pages/onbirthday/searchdetails.jsp" />
+    </definition>
+
+    <definition name=".faq" path="/pages/onbirthday/layouts/mainlayout.jsp">
+	        <put name="title"  value="onbirthday.com" />
+	        <put name="header" value="/pages/onbirthday/layouts/mainheader.jsp" />
+	        <put name="adheader" value="/pages/onbirthday/layouts/adheader.jsp" />
+	        <put name="navleft" value="/pages/onbirthday/layouts/navleft.jsp" />
+	        <put name="navright" value="/pages/onbirthday/layouts/navright.jsp" />
+	        <put name="adfooter" value="/pages/onbirthday/layouts/adfooter.jsp" />
+	        <put name="body"   value="/pages/onbirthday/faq.jsp" />
+    </definition>
+
+    <definition name=".error" path="/pages/onbirthday/layouts/mainlayout.jsp">
+        <put name="title"  value="onbirthday.com" />
+        <put name="header" value="/pages/onbirthday/layouts/mainheader.jsp" />
+        <put name="adheader" value="/pages/onbirthday/layouts/adheader.jsp" />
+        <put name="navleft" value="/pages/onbirthday/layouts/navleft.jsp" />
+        <put name="navright" value="/pages/onbirthday/layouts/navright.jsp" />
+        <put name="adfooter" value="/pages/onbirthday/layouts/adfooter.jsp" />
+        <put name="body"   value="/pages/onbirthday/error.jsp" />
+    </definition>
+
+
+	<!-- begin: misc crap -->
+	<definition name=".feeds" path="/pages/onbirthday/layouts/mainlayout.jsp">
+			<put name="title"  value="onbirthday.com" />
+			<put name="header" value="/pages/onbirthday/layouts/mainheader.jsp" />
+			<put name="adheader" value="/pages/onbirthday/layouts/adheader.jsp" />
+			<put name="navleft" value="/pages/onbirthday/layouts/navleft.jsp" />
+			<put name="navright" value="/pages/onbirthday/layouts/navright.jsp" />
+			<put name="adfooter" value="/pages/onbirthday/layouts/adfooter.jsp" />
+			<put name="body"   value="/pages/onbirthday/feeds.jsp" />
+    </definition>
+	<!-- end: misc crap -->
+
+
+	<!-- begin: admin -->
+    <definition name=".tipsPending" path="/pages/onbirthday/layouts/mainlayout.jsp">
+        <put name="title"  value="onbirthday.com" />
+        <put name="header" value="/pages/onbirthday/layouts/mainheader.jsp" />
+        <put name="adheader" value="/pages/onbirthday/layouts/adheader_blank.jsp" />
+        <put name="navleft" value="/pages/onbirthday/layouts/navleft_blank.jsp" />
+        <put name="navright" value="/pages/onbirthday/layouts/navright_blank.jsp" />
+        <put name="adfooter" value="/pages/onbirthday/layouts/adfooter_blank.jsp" />
+        <put name="body"   value="/pages/onbirthday/admin/tipspending.jsp" />
+    </definition>
+
+    <definition name=".tipDetails" path="/pages/onbirthday/layouts/mainlayout.jsp">
+        <put name="title"  value="onbirthday.com" />
+        <put name="header" value="/pages/onbirthday/layouts/mainheader.jsp" />
+        <put name="adheader" value="/pages/onbirthday/layouts/adheader_blank.jsp" />
+        <put name="navleft" value="/pages/onbirthday/layouts/navleft_blank.jsp" />
+        <put name="navright" value="/pages/onbirthday/layouts/navright_blank.jsp" />
+        <put name="adfooter" value="/pages/onbirthday/layouts/adfooter_blank.jsp" />
+        <put name="body"   value="/pages/onbirthday/admin/tipdetails.jsp" />
+    </definition>
+
+    <definition name=".businessCreate" path="/pages/onbirthday/layouts/mainlayout.jsp">
+        <put name="title"  value="onbirthday.com" />
+        <put name="header" value="/pages/onbirthday/layouts/mainheader.jsp" />
+        <put name="adheader" value="/pages/onbirthday/layouts/adheader_blank.jsp" />
+        <put name="navleft" value="/pages/onbirthday/layouts/navleft_blank.jsp" />
+        <put name="navright" value="/pages/onbirthday/layouts/navright_blank.jsp" />
+        <put name="adfooter" value="/pages/onbirthday/layouts/adfooter_blank.jsp" />
+        <put name="body"   value="/pages/onbirthday/admin/business.jsp" />
+    </definition>
+
+    <definition name=".searchAllResults" path="/pages/onbirthday/layouts/mainlayout.jsp">
+        <put name="title"  value="onbirthday.com" />
+        <put name="header" value="/pages/onbirthday/layouts/mainheader.jsp" />
+        <put name="adheader" value="/pages/onbirthday/layouts/adheader_blank.jsp" />
+        <put name="navleft" value="/pages/onbirthday/layouts/navleft_blank.jsp" />
+        <put name="navright" value="/pages/onbirthday/layouts/navright_blank.jsp" />
+        <put name="adfooter" value="/pages/onbirthday/layouts/adfooter_blank.jsp" />
+        <put name="body"   value="/pages/onbirthday/admin/searchallresults.jsp" />
+    </definition>
+
+    <definition name=".commentResults" path="/pages/onbirthday/layouts/mainlayout.jsp">
+        <put name="title"  value="onbirthday.com" />
+        <put name="header" value="/pages/onbirthday/layouts/mainheader.jsp" />
+        <put name="adheader" value="/pages/onbirthday/layouts/adheader_blank.jsp" />
+        <put name="navleft" value="/pages/onbirthday/layouts/navleft_blank.jsp" />
+        <put name="navright" value="/pages/onbirthday/layouts/navright_blank.jsp" />
+        <put name="adfooter" value="/pages/onbirthday/layouts/adfooter_blank.jsp" />
+        <put name="body"   value="/pages/onbirthday/admin/commentresults.jsp" />
+    </definition>
+	<!-- end: admin stuff -->
+
+
+	<!-- begin: store -->
+    <definition name=".createProduct" path="/pages/onbirthday/layouts/mainlayout.jsp">
+        <put name="title"  value="onbirthday.com" />
+        <put name="header" value="/pages/onbirthday/layouts/mainheader.jsp" />
+        <put name="adheader" value="/pages/onbirthday/layouts/adheader_blank.jsp" />
+        <put name="navleft" value="/pages/onbirthday/layouts/navleft_blank.jsp" />
+        <put name="navright" value="/pages/onbirthday/layouts/navright_blank.jsp" />
+        <put name="adfooter" value="/pages/onbirthday/layouts/adfooter_blank.jsp" />
+        <put name="body"   value="/pages/onbirthday/store/createproduct.jsp" />
+    </definition>
+
+    <definition name=".productList" path="/pages/onbirthday/layouts/mainlayout.jsp">
+        <put name="title"  value="onbirthday.com" />
+        <put name="header" value="/pages/onbirthday/layouts/mainheader.jsp" />
+        <put name="adheader" value="/pages/onbirthday/layouts/adheader.jsp" />
+        <put name="navleft" value="/pages/onbirthday/layouts/navleft.jsp" />
+        <put name="navright" value="/pages/onbirthday/layouts/navright.jsp" />
+        <put name="adfooter" value="/pages/onbirthday/layouts/adfooter.jsp" />
+        <put name="body"   value="/pages/onbirthday/store/products.jsp" />
+    </definition>
+
+    <definition name=".productDetails" path="/pages/onbirthday/layouts/mainlayout.jsp">
+        <put name="title"  value="onbirthday.com" />
+        <put name="header" value="/pages/onbirthday/layouts/mainheader.jsp" />
+        <put name="adheader" value="/pages/onbirthday/layouts/adheader.jsp" />
+        <put name="navleft" value="/pages/onbirthday/layouts/navleft.jsp" />
+        <put name="navright" value="/pages/onbirthday/layouts/navright.jsp" />
+        <put name="adfooter" value="/pages/onbirthday/layouts/adfooter.jsp" />
+        <put name="body"   value="/pages/onbirthday/store/productdetail.jsp" />
+    </definition>
+
+    <definition name=".cartDetails" path="/pages/onbirthday/layouts/mainlayout.jsp">
+        <put name="title"  value="onbirthday.com" />
+        <put name="header" value="/pages/onbirthday/layouts/mainheader.jsp" />
+        <put name="adheader" value="/pages/onbirthday/layouts/adheader.jsp" />
+        <put name="navleft" value="/pages/onbirthday/layouts/navleft.jsp" />
+        <put name="navright" value="/pages/onbirthday/layouts/navright.jsp" />
+        <put name="adfooter" value="/pages/onbirthday/layouts/adfooter.jsp" />
+        <put name="body"   value="/pages/onbirthday/store/cart.jsp" />
+    </definition>
+
+    <definition name=".billingInfo" path="/pages/onbirthday/layouts/mainlayout.jsp">
+        <put name="title"  value="onbirthday.com" />
+        <put name="header" value="/pages/onbirthday/layouts/mainheader.jsp" />
+        <put name="adheader" value="/pages/onbirthday/layouts/adheader.jsp" />
+        <put name="navleft" value="/pages/onbirthday/layouts/navleft.jsp" />
+        <put name="navright" value="/pages/onbirthday/layouts/navright.jsp" />
+        <put name="adfooter" value="/pages/onbirthday/layouts/adfooter.jsp" />
+        <put name="body"   value="/pages/onbirthday/store/billinginfo.jsp" />
+    </definition>
+
+    <definition name=".submitOrderInfo" path="/pages/onbirthday/layouts/mainlayout.jsp">
+        <put name="title"  value="onbirthday.com" />
+        <put name="header" value="/pages/onbirthday/layouts/mainheader.jsp" />
+        <put name="adheader" value="/pages/onbirthday/layouts/adheader.jsp" />
+        <put name="navleft" value="/pages/onbirthday/layouts/navleft.jsp" />
+        <put name="navright" value="/pages/onbirthday/layouts/navright.jsp" />
+        <put name="adfooter" value="/pages/onbirthday/layouts/adfooter.jsp" />
+        <put name="body"   value="/pages/onbirthday/store/confirmorder.jsp" />
+    </definition>
+	<!-- end: store -->
+<!-- end: main site -->
+
+
+<!-- begin: thecakemuse site -->
+    <definition name=".tcmMainLayout" path="/pages/thecakemuse/layouts/mainlayout.jsp">
+        <put name="title"  value="The Cake Muse" />
+        <put name="header" value="/pages/thecakemuse/layouts/mainheader.jsp" />
+        <put name="adheader" value="/pages/thecakemuse/layouts/adheader.jsp" />
+        <put name="navleft" value="/pages/thecakemuse/layouts/navleft.jsp" />
+        <put name="navright" value="/pages/thecakemuse/layouts/navright.jsp" />
+        <put name="adfooter" value="/pages/thecakemuse/layouts/adfooter.jsp" />
+        <put name="body"   value="/pages/thecakemuse/main.jsp" />
+    </definition>
+
+    <definition name=".tcmContactUs" path="/pages/thecakemuse/layouts/mainlayout.jsp">
+        <put name="title"  value="The Cake Muse" />
+        <put name="header" value="/pages/thecakemuse/layouts/mainheader.jsp" />
+        <put name="adheader" value="/pages/thecakemuse/layouts/adheader.jsp" />
+        <put name="navleft" value="/pages/thecakemuse/layouts/navleft.jsp" />
+        <put name="navright" value="/pages/thecakemuse/layouts/navright.jsp" />
+        <put name="adfooter" value="/pages/thecakemuse/layouts/adfooter.jsp" />
+        <put name="body"   value="/pages/thecakemuse/contactus.jsp" />
+    </definition>
+
+    <definition name=".tcmError" path="/pages/thecakemuse/layouts/mainlayout.jsp">
+        <put name="title"  value="The Cake Muse" />
+        <put name="header" value="/pages/thecakemuse/layouts/mainheader.jsp" />
+        <put name="adheader" value="/pages/thecakemuse/layouts/adheader.jsp" />
+        <put name="navleft" value="/pages/thecakemuse/layouts/navleft.jsp" />
+        <put name="navright" value="/pages/thecakemuse/layouts/navright.jsp" />
+        <put name="adfooter" value="/pages/thecakemuse/layouts/adfooter.jsp" />
+        <put name="body"   value="/pages/thecakemuse/error.jsp" />
+    </definition>
+
+    <definition name=".tcmContactsResults" path="/pages/thecakemuse/layouts/mainlayout.jsp">
+        <put name="title"  value="The Cake Muse" />
+        <put name="header" value="/pages/thecakemuse/layouts/mainheader.jsp" />
+        <put name="adheader" value="/pages/thecakemuse/layouts/adheader.jsp" />
+        <put name="navleft" value="/pages/thecakemuse/layouts/navleft.jsp" />
+        <put name="navright" value="/pages/thecakemuse/layouts/navright.jsp" />
+        <put name="adfooter" value="/pages/thecakemuse/layouts/adfooter.jsp" />
+        <put name="body"   value="/pages/thecakemuse/admin/contactResults.jsp" />
+    </definition>
+
+    <definition name=".tcmAbout" path="/pages/thecakemuse/layouts/mainlayout.jsp">
+        <put name="title"  value="The Cake Muse" />
+        <put name="header" value="/pages/thecakemuse/layouts/mainheader.jsp" />
+        <put name="adheader" value="/pages/thecakemuse/layouts/adheader.jsp" />
+        <put name="navleft" value="/pages/thecakemuse/layouts/navleft.jsp" />
+        <put name="navright" value="/pages/thecakemuse/layouts/navright.jsp" />
+        <put name="adfooter" value="/pages/thecakemuse/layouts/adfooter.jsp" />
+        <put name="body"   value="/pages/thecakemuse/about.jsp" />
+    </definition>
+
+    <definition name=".tcmPortfolio" path="/pages/thecakemuse/layouts/mainlayout.jsp">
+        <put name="title"  value="The Cake Muse" />
+        <put name="header" value="/pages/thecakemuse/layouts/mainheader.jsp" />
+        <put name="adheader" value="/pages/thecakemuse/layouts/adheader.jsp" />
+        <put name="navleft" value="/pages/thecakemuse/layouts/navleft.jsp" />
+        <put name="navright" value="/pages/thecakemuse/layouts/navright.jsp" />
+        <put name="adfooter" value="/pages/thecakemuse/layouts/adfooter.jsp" />
+        <put name="body"   value="/pages/thecakemuse/portfolio.jsp" />
+    </definition>
+
+    <definition name=".tcmLinks" path="/pages/thecakemuse/layouts/mainlayout.jsp">
+        <put name="title"  value="The Cake Muse" />
+        <put name="header" value="/pages/thecakemuse/layouts/mainheader.jsp" />
+        <put name="adheader" value="/pages/thecakemuse/layouts/adheader.jsp" />
+        <put name="navleft" value="/pages/thecakemuse/layouts/navleft.jsp" />
+        <put name="navright" value="/pages/thecakemuse/layouts/navright.jsp" />
+        <put name="adfooter" value="/pages/thecakemuse/layouts/adfooter.jsp" />
+        <put name="body"   value="/pages/thecakemuse/links.jsp" />
+    </definition>
+
+    <!-- begin: links -->
+    <definition name=".tcmCakes" path="/pages/thecakemuse/layouts/mainlayout.jsp">
+        <put name="title"  value="The Cake Muse" />
+        <put name="header" value="/pages/thecakemuse/layouts/mainheader.jsp" />
+        <put name="adheader" value="/pages/thecakemuse/layouts/adheader.jsp" />
+        <put name="navleft" value="/pages/thecakemuse/layouts/navleft.jsp" />
+        <put name="navright" value="/pages/thecakemuse/layouts/navright.jsp" />
+        <put name="adfooter" value="/pages/thecakemuse/layouts/adfooter.jsp" />
+        <put name="body"   value="/pages/thecakemuse/cakes.jsp" />
+    </definition>
+
+    <definition name=".tcmCookies" path="/pages/thecakemuse/layouts/mainlayout.jsp">
+        <put name="title"  value="The Cake Muse" />
+        <put name="header" value="/pages/thecakemuse/layouts/mainheader.jsp" />
+        <put name="adheader" value="/pages/thecakemuse/layouts/adheader.jsp" />
+        <put name="navleft" value="/pages/thecakemuse/layouts/navleft.jsp" />
+        <put name="navright" value="/pages/thecakemuse/layouts/navright.jsp" />
+        <put name="adfooter" value="/pages/thecakemuse/layouts/adfooter.jsp" />
+        <put name="body"   value="/pages/thecakemuse/cookies.jsp" />
+    </definition>
+
+    <definition name=".tcmPricing" path="/pages/thecakemuse/layouts/mainlayout.jsp">
+        <put name="title"  value="The Cake Muse" />
+        <put name="header" value="/pages/thecakemuse/layouts/mainheader.jsp" />
+        <put name="adheader" value="/pages/thecakemuse/layouts/adheader.jsp" />
+        <put name="navleft" value="/pages/thecakemuse/layouts/navleft.jsp" />
+        <put name="navright" value="/pages/thecakemuse/layouts/navright.jsp" />
+        <put name="adfooter" value="/pages/thecakemuse/layouts/adfooter.jsp" />
+        <put name="body"   value="/pages/thecakemuse/pricing.jsp" />
+    </definition>
+
+    <definition name=".tcmOrdering" path="/pages/thecakemuse/layouts/mainlayout.jsp">
+        <put name="title"  value="The Cake Muse" />
+        <put name="header" value="/pages/thecakemuse/layouts/mainheader.jsp" />
+        <put name="adheader" value="/pages/thecakemuse/layouts/adheader.jsp" />
+        <put name="navleft" value="/pages/thecakemuse/layouts/navleft.jsp" />
+        <put name="navright" value="/pages/thecakemuse/layouts/navright.jsp" />
+        <put name="adfooter" value="/pages/thecakemuse/layouts/adfooter.jsp" />
+        <put name="body"   value="/pages/thecakemuse/ordering.jsp" />
+    </definition>
+
+    <definition name=".tcmContact" path="/pages/thecakemuse/layouts/mainlayout.jsp">
+        <put name="title"  value="The Cake Muse" />
+        <put name="header" value="/pages/thecakemuse/layouts/mainheader.jsp" />
+        <put name="adheader" value="/pages/thecakemuse/layouts/adheader.jsp" />
+        <put name="navleft" value="/pages/thecakemuse/layouts/navleft.jsp" />
+        <put name="navright" value="/pages/thecakemuse/layouts/navright.jsp" />
+        <put name="adfooter" value="/pages/thecakemuse/layouts/adfooter.jsp" />
+        <put name="body"   value="/pages/thecakemuse/contact.jsp" />
+    </definition>
+    <!-- end: links -->
+
+<!-- end: thecakemuse site -->
+
+<!--
+    <definition name=".mainLayout" path="/layouts/main.jsp">
+        <put name="title"  value="Sample Page Title" />
+        <put name="header" value="/layouts/header.jsp" />
+        <put name="menu"   value=".mainMenu" />
+        <put name="footer" value="/layouts/footer.jsp" />
+        <put name="body"   value=".portal.body" />
+    </definition>
+
+    <definition name=".mainMenu" path="/common/layouts/vboxLayout.jsp" >
+        <putList name="list" >
+            <add value=".menu.links" />
+            <add value=".menu.taglib.references" />
+            <add value=".menu.printer.friendly" />
+            <add value=".menu.old.documents" />
+      </putList>
+    </definition>
+
+    <definition name="aPage" extends=".mainLayout">
+        <put name="title"  value="Another Title" />
+        <put name="body"   value=".aPage.body" />
+    </definition>
+-->
+
+    <definition name="${YOUR_DEFINITION_HERE}">
+    </definition>
+
+</tiles-definitions>
